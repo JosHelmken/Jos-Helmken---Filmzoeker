@@ -1,0 +1,182 @@
+$bgcolor: #141414;
+$bgcolor2: #242424;
+$textcolor: #585858;
+$headlinecolor: white;
+$linkcolor: #e5e5e5;
+$accentcolor: #ff5252;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $textcolor;
+  background: $bgcolor;
+}
+
+a {
+  color: $linkcolor;
+  text-decoration: none;
+  &:hover {
+    color: $headlinecolor;
+  }
+}
+mark {
+  float: left;
+  background: $accentcolor;
+  padding: 4px 15px;
+  border-radius: 5px;
+  font-size: 25px;
+  color: $headlinecolor;
+  letter-spacing: 1px;
+  margin-right: 15px;
+}
+
+header,
+nav,
+main,
+footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  & h1 {
+    margin-top: 20px;
+    font-size: 36px;
+  }
+  & h3 {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+  }
+}
+h2 {
+  margin-bottom: 30px;
+
+  & strong {
+    color: $headlinecolor;
+  }
+}
+.message {
+  font-size: 12px;
+  letter-spacing: 1px;
+  & a {
+    cursor: pointer;
+  }
+}
+.filter-h2 {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  font-weight: 400;
+  font-size: 20px;
+}
+/* Fancy radio button css */
+
+/* The container */
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 30px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: $textcolor;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: $headlinecolor;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: $accentcolor;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $bgcolor;
+}
+.search-wrap {
+  float: right;
+  margin-top: -5px;
+}
+.search-wrap input {
+  padding: 6.2px 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 200px;
+  background: $bgcolor2;
+}
+.search-wrap button {
+  float: right;
+  padding: 10px 15px;
+  margin-right: 20px;
+  background: $accentcolor;
+  color: $headlinecolor;
+  border: none;
+}
+/* Grid container and grid child */
+.grid-container {
+  margin-left: -1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  & div {
+    text-align: center;
+  }
+  & img {
+    width: 260px;
+    max-height: 365px;
+    transition: opacity 200ms ease-in-out;
+  }
+  & img:hover {
+    opacity: 60%;
+  }
+}

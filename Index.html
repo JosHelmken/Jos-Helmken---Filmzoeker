@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/ico" href="./favicon.ico">
+  <link rel="stylesheet" href="./scss/style.css">
+  <script type="module" defer src="script.js"></script>
+  <title>Film finder - build by Jos</title>
+</head>
+
+<body>
+  <header>
+    <h1><mark>BBJ</mark> film zoeker </h1>
+  </header>
+  <nav>
+    <h2 class="filter-h2">Filter by: </h2>
+    <label class="container">New Films
+      <input type="radio" name="filter" value="new">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Avengers Films
+      <input type="radio" name="filter" value="avengers">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">X-man Films
+      <input type="radio" name="filter" value="x-men">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Princess Films
+      <input type="radio" name="filter" value="princess">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Batman Films
+      <input type="radio" name="filter" value="batman">
+      <span class="checkmark"></span>
+    </label>
+    <div class="search-wrap">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="message"></div>
+    <!-- Dynamic grid with movies -->
+    <div class="grid-container">
+
+    </div>
+  </main>
+
+
+</body>
+
+</html>
